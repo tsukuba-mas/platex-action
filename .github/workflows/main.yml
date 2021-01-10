@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: test!!
     steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
       - name: action init
         id: test_id
         uses: tsukuba-mas/platex-action@main
