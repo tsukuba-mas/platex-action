@@ -2,10 +2,6 @@ name: "platex Action"
 author: "mas-tsukuba"
 description: "Compile tex file with platex"
 inputs:
-  who-to-greet:
-    description: "Who to Greet"
-    required: true
-    default: "World"
   LATEX_FILE_NAME:
     description: "Compile Tex File"
     required: true
@@ -13,5 +9,3 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{inputs.who-to-greet}}
