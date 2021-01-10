@@ -11,7 +11,7 @@ if [ ! -f .latexmkrc2 ]; then
     echo "done"
 fi
 
-ls
+ls -la
 pwd
 
 # make pdf
