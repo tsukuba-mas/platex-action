@@ -3,16 +3,9 @@
 # . = /github/workspace if actions/checkout
 set -eux
 
-ls /
-pwd
-
-if [ ! -f .latexmkrc2 ]; then
-    cp /.latexmkrc .latexmkrc2
-    echo "done"
+if [ ! -f .latexmkrc ]; then
+    cp /.latexmkrc .latexmkrc
 fi
-
-ls -la
-pwd
 
 # make pdf
 latexmk $INPUT_LATEX_FILE_NAME
