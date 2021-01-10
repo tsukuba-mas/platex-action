@@ -2,6 +2,8 @@
 # . = /github/workspace if actions/checkout
 set -eux
 
+echo $latexFileName
+
 ls
 pwd
 
@@ -9,8 +11,3 @@ latexmk main.tex
 
 ls 
 pwd
-
-
-# echo "Hello $1"
-# time=$(date)
-# echo "::set-output name=time::$time"

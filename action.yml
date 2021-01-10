@@ -5,9 +5,10 @@ inputs:
     description: "Who to Greet"
     required: true
     default: "World"
-outputs:
-  time:
-    description: "The time we greeted you"
+  latexFileName:
+    description: "Compile Tex File"
+    required: true
+    default: "main.tex"
 runs:
   using: "docker"
   image: "Dockerfile"
