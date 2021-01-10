@@ -1,3 +1,7 @@
+# The Example of Compiling LaTeX File
+# In your latex repository, make .github/workflows/main.yml like below.
+# You only have to change `LATEX_FILE_NAME` as your tex file.
+
 on:
   push:
     tags:
@@ -6,8 +10,10 @@ on:
 jobs:
   test_job:
     runs-on: ubuntu-latest
-    name: test!!
+    name: Example of compiling pdf
     steps:
+      # make pdf
+      # LATEX_FILE_NAME -> main.pdf generated
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Compile Tex File
@@ -15,10 +21,7 @@ jobs:
         uses: tsukuba-mas/platex-action@main
         with:
           LATEX_FILE_NAME: "main.tex"
-      - name: test
-        run: |
-          pwd
-          ls
+      # Create Release
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -28,9 +31,10 @@ jobs:
           tag_name: ${{github.ref}}
           release_name: Release ${{ github.ref }}
           body: |
-            Compiled PDF
+            Compiled PDF ${{github.ref}}
           draft: false
           prerelease: false
+      # Upload Asset main.pdf
       - name: Upload Release Asset
         id: upload_release_asset
         uses: actions/upload-release-asset@v1

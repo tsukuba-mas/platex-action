@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# https://qiita.com/Rumisbern/items/d9de41823aa46d5f05a8
+# example .latexmkrc 
 
 # platex pdf-sync
 $latex = 'platex -synctex=1 -halt-on-error';
@@ -10,8 +10,8 @@ $latex_silent = 'platex -synctex=1 -halt-on-error -interaction=batchmode';
 # pbibtex
 $bibtex = 'pbibtex';
 
-# div -> pdf  %O:option -o:output_name_argument %D:output_name %S:input_name
-$dvipdf = 'dvipdfmx %O -o %D %S';
+# div -> pdf output main.pdf 
+$dvipdf = 'dvipdfmx %O -o main.pdf %S';
 
 # index
 $makeindex = 'mendex %O -o %D %S';
