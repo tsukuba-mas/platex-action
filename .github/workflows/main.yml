@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: test!!
+    steps:
+      - name: action init
+        id: test_id
+        uses: tsukuba-mas/platex-action
+        with:
+          who-to-greet: "hello, world"
+      - name: Get the output
+        run: echo "The time was ${{steps.test_idi.outputs.time}}"
