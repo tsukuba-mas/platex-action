@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: action init
         id: test_id
-        uses: tsukuba-mas/platex-action
+        uses: tsukuba-mas/platex-action@main
         with:
           who-to-greet: "hello, world"
       - name: Get the output
