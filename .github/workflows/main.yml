@@ -15,6 +15,10 @@ jobs:
         uses: tsukuba-mas/platex-action@main
         with:
           LATEX_FILE_NAME: "main.tex"
+      - name: test
+        run: |
+          pwd
+          ls
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -36,3 +40,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./main.pdf
           asset_name: main.pdf
+          asset_content_type: application/pdf
