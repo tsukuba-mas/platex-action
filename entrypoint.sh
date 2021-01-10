@@ -1,5 +1,13 @@
-#!/bin/sh -l
+#!/bin/bash
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+set -eux
+
+ls
+pwd
+
+latexmk
+
+
+# echo "Hello $1"
+# time=$(date)
+# echo "::set-output name=time::$time"
