@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# . = /github/workspace if actions/checkout
 set -eux
 
 ls
