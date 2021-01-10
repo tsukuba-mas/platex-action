@@ -21,6 +21,10 @@ jobs:
         uses: tsukuba-mas/platex-action@main
         with:
           LATEX_FILE_NAME: "main.tex"
+      - name: Test
+        run: |
+          pwd
+          ls
       # Create Release
       - name: Create Release
         id: create_release
