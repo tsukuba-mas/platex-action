@@ -1,11 +1,12 @@
 name: "platex Action"
+author: "mas-tsukuba"
 description: "Compile tex file with platex"
 inputs:
   who-to-greet:
     description: "Who to Greet"
     required: true
     default: "World"
-  latexFileName:
+  LATEX_FILE_NAME:
     description: "Compile Tex File"
     required: true
     default: "main.tex"

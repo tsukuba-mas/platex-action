@@ -2,7 +2,7 @@
 # . = /github/workspace if actions/checkout
 set -eux
 
-echo $latexFileName
+echo $INPUT_LATEX_FILE_NAME
 
 ls
 pwd
