@@ -5,7 +5,10 @@ set -eux
 ls
 pwd
 
-latexmk
+latexmk main.tex
+
+ls 
+pwd
 
 
 # echo "Hello $1"
